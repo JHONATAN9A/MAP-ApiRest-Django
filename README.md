@@ -14,6 +14,31 @@ API REST para consultar municipios por departamento y obtener el municipio al qu
 
 ---
 
+## Variables de configuración
+
+Antes de ejecutar el proyecto, debes configurar las siguientes variables (por ejemplo en un archivo `.env` o directamente en `settings.py`):
+
+```
+NAME_DB=""
+USER_DB=""
+PASSWORD_DB=""
+HOST_DB=""
+PORT_DB=""
+
+SECRET_KEY=""
+DEBUG=True
+```
+
+- **NAME_DB**: nombre de la base de datos  
+- **USER_DB**: usuario de la base de datos  
+- **PASSWORD_DB**: contraseña de la base de datos  
+- **HOST_DB**: host de la base de datos (ej. localhost)  
+- **PORT_DB**: puerto de la base de datos (ej. 5432 para PostgreSQL)  
+- **SECRET_KEY**: clave secreta de Django para seguridad  
+- **DEBUG**: activar/desactivar modo debug (usar False en producción)  
+
+---
+
 ## Instalación y despliegue local
 
 1. **Clonar el repositorio**
@@ -45,14 +70,7 @@ Configura tu base de datos en `settings.py` (recomendado PostgreSQL con PostGIS 
 python manage.py migrate
 ```
 
-5. **Cargar datos iniciales**  
-(Asume que tienes un comando o fixtures para esto, sino omitir)
-
-```
-python manage.py loaddata initial_data.json
-```
-
-6. **Ejecutar servidor local**
+5. **Ejecutar servidor local**
 
 ```
 python manage.py runserver
@@ -150,6 +168,5 @@ Respuesta ejemplo (GeoJSON simplificado):
 
 ## Notas
 
-- Asegúrate de que la base de datos tenga los datos de municipios y oficinas correctamente cargados.  
-- Configura correctamente las variables de entorno y `settings.py` para la conexión y seguridad.  
+- Asegúrate de configurar correctamente las variables de entorno y `settings.py` para la conexión y seguridad.  
 - El proyecto usa GeoDjango, por lo que requiere instalación y configuración previa de librerías geoespaciales (PostGIS, GDAL, GEOS).  
