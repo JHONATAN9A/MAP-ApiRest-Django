@@ -16,8 +16,6 @@ COPY . .
 RUN pip install --upgrade pip \
  && pip install -r requirements.txt
 
-# Ejecutar collectstatic
-RUN python manage.py collectstatic --noinput
 
 # Variables de entorno
 ENV PYTHONUNBUFFERED=1
