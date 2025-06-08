@@ -16,7 +16,10 @@ COPY . .
 RUN pip install --upgrade pip \
  && pip install -r requirements.txt
 
-# Especificar variables de entorno necesarias
+# Ejecutar collectstatic
+RUN python manage.py collectstatic --noinput
+
+# Variables de entorno
 ENV PYTHONUNBUFFERED=1
 
 # Puerto expuesto para Railway

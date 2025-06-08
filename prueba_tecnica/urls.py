@@ -24,7 +24,7 @@ from rest_framework_simplejwt.views import (
 )
 
 from api.views import *
-
+from .views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),  # Panel de administración de Django
@@ -33,3 +33,8 @@ urlpatterns = [
     path('municipios/', MunicipiosPorDepartamentoView.as_view(), name='municipios_por_departamento'),  # Municipios por departamento
     path('municipio-por-oficina/', MunicipioPorOficinaView.as_view(), name='municipio-por-oficina'),  # Municipio según oficina (geolocalización)
 ]
+
+
+handler403 = 'prueba_tecnica.views.custom_403'
+handler404 = 'prueba_tecnica.views.custom_404'
+handler500 = 'prueba_tecnica.views.custom_500'
