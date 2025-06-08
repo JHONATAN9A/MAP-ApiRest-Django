@@ -7,25 +7,59 @@
     body {
       background-color: #f0f9ff;
       color: #0369a1;
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      padding: 0 20px;
       text-align: center;
-      padding: 50px;
     }
+
+    .error-container {
+      max-width: 400px;
+      padding: 2rem;
+      border-radius: 1rem;
+    }
+
+    img {
+      width: 120px;
+      margin-bottom: 1.5rem;
+    }
+
     h1 {
       font-size: 4rem;
+      margin: 0;
     }
+
     p {
       font-size: 1.2rem;
+      margin: 1rem 0 2rem;
     }
+
     a {
-      color: #0284c7;
-      text-decoration: underline;
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background-color: #0ea5e9;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 999px;
+      transition: background-color 0.3s;
+    }
+
+    a:hover {
+      background-color: #0284c7;
     }
   </style>
 </head>
 <body>
-  <h1>404</h1>
-  <p>Lo sentimos, no pudimos encontrar esa página.</p>
-  <a href="/">Ir al inicio</a>
+  <div class="error-container">
+    <img src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMzMzJmZmcLCwqampoWFhYyMjP///wAAAAAAAAAAACH5BAAAAAAALAAAAAAQABAAAAM5CLrc/jDKSau9OOvNu/9A4UBACH5BAAAAAAALAAAAAAQABAAAANKeLrc/jDKSau9OOvNu/9A4UBAOw==" alt="404 Not Found">
+    <h1>404</h1>
+    <p>Lo sentimos, no pudimos encontrar esa página.</p>
+    <a href="/">Ir al inicio</a>
+  </div>
 </body>
 </html>

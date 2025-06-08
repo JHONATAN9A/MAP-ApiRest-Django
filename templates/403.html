@@ -2,30 +2,64 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>403 - Acceso denegado</title>
+  <title>403 - Acceso Denegado</title>
   <style>
     body {
-      background-color: #fef2f2;
-      color: #991b1b;
-      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff1f2;
+      color: #7f1d1d;
+      font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      padding: 0 20px;
       text-align: center;
-      padding: 50px;
     }
+
+    .error-container {
+      max-width: 400px;
+      padding: 2rem;
+      border-radius: 1rem;
+    }
+
+    img {
+      width: 120px;
+      margin-bottom: 1.5rem;
+    }
+
     h1 {
       font-size: 4rem;
+      margin: 0;
     }
+
     p {
       font-size: 1.2rem;
+      margin: 1rem 0 2rem;
     }
+
     a {
-      color: #b91c1c;
-      text-decoration: underline;
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background-color: #dc2626;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 999px;
+      transition: background-color 0.3s;
+    }
+
+    a:hover {
+      background-color: #b91c1c;
     }
   </style>
 </head>
 <body>
-  <h1>403</h1>
-  <p>No tienes permisos para acceder a esta página.</p>
-  <a href="/api/token/">Iniciar Sesión</a>
+  <div class="error-container">
+    <img src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMbGxrS0tMbGxtbW1tra2v///wAAAAAAAAAAACH5BAAAAAAALAAAAAAQABAAAAM6CLrc/jDKSau9OOvNu/8A4UEACH5BAAAAAAALAAAAAAQABAAAANKeLrc/jDKSau9OOvNu/9A4UEAOw==" alt="Error">
+    <h1>403</h1>
+    <p>No tienes permisos para acceder a esta página.</p>
+    <a href="/api/token/">Iniciar Sesión</a>
+  </div>
 </body>
 </html>
